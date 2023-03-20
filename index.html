@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-ES">
 
 <head>
   <meta charset="UTF-8">
@@ -12,6 +12,7 @@
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="assets/js/main.js" type="module" defer></script>
+
 </head>
 
 <body>
@@ -32,136 +33,137 @@
           </path>
         </svg>
       </a>
-    
-    <div class="nav__menu show__menu">
-  <button type="button" class="nav__btn btn--close">
-    <i class="bx bx-x"></i>
-  </button>
-  <ul class="nav__list">
-    <li class="nav__item">
-      <a href="#" class="nav__link">Inicio</a>
-    </li>
-    <li class="nav__item">
-      <a href="#" class="nav__link">Productos</a>
-    </li>
-  </ul>
-</div>
-<div class="nav__buttons">
-  <button type="button" class="nav__btn btn--cart">
-    <i class="bx bxs-shopping-bag-alt"></i>
-    <span class="notification-button"></span>
-  </button>
-  <button type="button" class="nav__btn btn--menu">
-    <i class="bx bxs-grid-alt"></i>
-  </button>
-</div>
-      
 
-        <!--<button type="button" class="nav_btn btn--nosotros">
+      <nav class="nav">
+        <div class="nav__menu">
+          <button type="button" class="nav__btn btn--close">
+            <i class="bx bx-x"></i>
+          </button>
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#" class="nav__link">Inicio</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Productos</a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav__buttons">
+          <button type="button" class="nav__btn btn--cart">
+            <i class="bx bxs-shopping-bag-alt"></i>
+            <span class="notify"></span>
+          </button>
+          <button type="button" class="nav__btn btn--menu">
+            <i class="bx bxs-grid-alt"></i>
+          </button>
+        </div>
+      </nav>
+      
+      
+      <!--<button type="button" class="nav_btn btn--nosotros">
           <i class='bx bxs-store-alt'></i>
         </button>-->
 
-        <!--<button type="button" class="nav_btn btn--contactanos">
+      <!--<button type="button" class="nav_btn btn--contactanos">
           <i class='bx bxs-message-dots'></i>
         </button>-->
     </nav>
   </header>
   <!--Main comienzo-->
-  <main class="main">
-    <section class="products section">
-      <h2 class="products__title section--title">Productos</h2>
-      <div class="products__container container">
-        <article class="product">
-          <div class="product__image">
-            <img src="https://fernandosalazar.co/wp-content/uploads/2020/12/camisa-fs-formal-gris-claro.png"
-              alt="camisa-fs-formal-gris-claro">
-          </div>
-          <div class="product__content">
-            <button type="button" class="product__btn add--to--cart">
-              <i class='bx bxs-cart-add'></i>
-            </button>
-            <span class="product__price">$10</span>
-            <span class="product__stock">Disponibles: 5</span>
-            <h3 class="product__title">Camisa manga larga slim fit</h3>
-          </div>
-        </article>
+  <section class="products section">
+    <h2 class="products__title section--title">Productos</h2>
+    <div class="products__container">
+      <article class="product">
+        <div class="product__image">
+          <img src="https://fernandosalazar.co/wp-content/uploads/2020/12/camisa-fs-formal-gris-claro.png"
+            alt="camisa-fs-formal-gris-claro">
+        </div>
+        <div class="product__content">
+          <button type="button" class="product__btn add--to--cart">
+            <i class='bx bxs-cart-add'></i>
+          </button>
+          <span class="product__price">$10</span>
+          <span class="product__stock">Disponibles: 5</span>
+          <h3 class="product__title">Camisa manga larga slim fit</h3>
+        </div>
+      </article>
 
-        <article class="product">
-          <div class="product__image">
-            <img src="https://fernandosalazar.co/wp-content/uploads/2020/12/camisa-fs-formal-gris-claro.png"
-              alt="camisa-fs-formal-gris-claro">
-          </div>
-          <div class="product__content">
-            <button type="button" class="product__btn add--to--cart">
-              <i class='bx bxs-cart-add'></i>
-            </button>
-            <span class="product__price">$10</span>
-            <span class="product__stock">Disponibles: 5</span>
-            <h3 class="product__title">Camisa manga larga slim fit</h3>
-          </div>
-        </article>
+      <article class="product">
+        <div class="product__image">
+          <img src="https://fernandosalazar.co/wp-content/uploads/2020/12/camisa-fs-formal-gris-claro.png"
+            alt="camisa-fs-formal-gris-claro">
+        </div>
+        <div class="product__content">
+          <button type="button" class="product__btn add--to--cart">
+            <i class='bx bxs-cart-add'></i>
+          </button>
+          <span class="product__price">$5</span>
+          <span class="product__stock">Disponibles: 6</span>
+          <h3 class="product__title">Camisa manga larga slim fit</h3>
+        </div>
+      </article>
 
-        <article class="product">
-          <div class="product__image">
-            <img src="https://fernandosalazar.co/wp-content/uploads/2020/12/camisa-fs-formal-gris-claro.png"
-              alt="camisa-fs-formal-gris-claro">
-          </div>
-          <div class="product__content">
-            <button type="button" class="product__btn add--to--cart">
-              <i class='bx bxs-cart-add'></i>
-            </button>
-            <span class="product__price">$10</span>
-            <span class="product__stock">Disponibles: 5</span>
-            <h3 class="product__title">Camisa manga larga slim fit</h3>
-          </div>
-        </article>
+      <article class="product">
+        <div class="product__image">
+          <img src="https://fernandosalazar.co/wp-content/uploads/2020/12/camisa-fs-formal-gris-claro.png"
+            alt="camisa-fs-formal-gris-claro">
+        </div>
+        <div class="product__content">
+          <button type="button" class="product__btn add--to--cart">
+            <i class='bx bxs-cart-add'></i>
+          </button>
+          <span class="product__price">$10</span>
+          <span class="product__stock">Disponibles: 5</span>
+          <h3 class="product__title">Camisa manga larga slim fit</h3>
+        </div>
+      </article>
 
-        <article class="product">
-          <div class="product__image">
-            <img src="https://fernandosalazar.co/wp-content/uploads/2020/12/camisa-fs-formal-gris-claro.png"
-              alt="camisa-fs-formal-gris-claro">
-          </div>
-          <div class="product__content">
-            <button type="button" class="product__btn add--to--cart">
-              <i class='bx bxs-cart-add'></i>
-            </button>
-            <span class="product__price">$10</span>
-            <span class="product__stock">Disponibles: 5</span>
-            <h3 class="product__title">Camisa manga larga slim fit</h3>
-          </div>
-        </article>
+      <article class="product">
+        <div class="product__image">
+          <img src="https://fernandosalazar.co/wp-content/uploads/2020/12/camisa-fs-formal-gris-claro.png"
+            alt="camisa-fs-formal-gris-claro">
+        </div>
+        <div class="product__content">
+          <button type="button" class="product__btn add--to--cart">
+            <i class='bx bxs-cart-add'></i>
+          </button>
+          <span class="product__price">$10</span>
+          <span class="product__stock">Disponibles: 5</span>
+          <h3 class="product__title">Camisa manga larga slim fit</h3>
+        </div>
+      </article>
 
-        <article class="product">
-          <div class="product__image">
-            <img src="https://fernandosalazar.co/wp-content/uploads/2020/12/camisa-fs-formal-gris-claro.png"
-              alt="camisa-fs-formal-gris-claro">
-          </div>
-          <div class="product__content">
-            <button type="button" class="product__btn add--to--cart">
-              <i class='bx bxs-cart-add'></i>
-            </button>
-            <span class="product__price">$10</span>
-            <span class="product__stock">Disponibles: 5</span>
-            <h3 class="product__title">Camisa manga larga slim fit</h3>
-          </div>
-        </article>
+      <article class="product">
+        <div class="product__image">
+          <img src="https://fernandosalazar.co/wp-content/uploads/2020/12/camisa-fs-formal-gris-claro.png"
+            alt="camisa-fs-formal-gris-claro">
+        </div>
+        <div class="product__content">
+          <button type="button" class="product__btn add--to--cart">
+            <i class='bx bxs-cart-add'></i>
+          </button>
+          <span class="product__price">$10</span>
+          <span class="product__stock">Disponibles: 5</span>
+          <h3 class="product__title">Camisa manga larga slim fit</h3>
+        </div>
+      </article>
 
-        <article class="product">
-          <div class="product__image">
-            <img src="https://fernandosalazar.co/wp-content/uploads/2020/12/camisa-fs-formal-gris-claro.png"
-              alt="camisa-fs-formal-gris-claro">
-          </div>
-          <div class="product__content">
-            <button type="button" class="product__btn add--to--cart">
-              <i class='bx bxs-cart-add'></i>
-            </button>
-            <span class="product__price">$10</span>
-            <span class="product__stock">Disponibles: 5</span>
-            <h3 class="product__title">Camisa manga larga slim fit</h3>
-          </div>
-        </article>
-      </div>
-    </section>
+      <article class="product">
+        <div class="product__image">
+          <img src="https://fernandosalazar.co/wp-content/uploads/2020/12/camisa-fs-formal-gris-claro.png"
+            alt="camisa-fs-formal-gris-claro">
+        </div>
+        <div class="product__content">
+          <button type="button" class="product__btn add--to--cart">
+            <i class='bx bxs-cart-add'></i>
+          </button>
+          <span class="product__price">$10</span>
+          <span class="product__stock">Disponibles: 5</span>
+          <h3 class="product__title">Camisa manga larga slim fit</h3>
+        </div>
+      </article>
+    </div>
+  </section>
   </main>
 
   <!--cart-->
@@ -174,10 +176,10 @@
         </button>
       </div>
       <div class="cart__body">
-        <!--<div class="cart__empty">
+        <div class="cart__empty">
           <i class='bx bxs-shopping-bag-alt'></i>
           <p class="cart__empty--text">Tu carro esta vacio</p>
-        </div>-->
+        </div>
         <article class="article">
           <div class="article__image">
             <img src="https://fernandosalazar.co/wp-content/uploads/2020/12/camisa-fs-formal-gris-claro.png"
@@ -201,9 +203,6 @@
             </button>
           </div>
         </article>
-
-        
-
       </div>
       <div class="cart__footer">
         <div class="cart__count">
