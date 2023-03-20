@@ -12,16 +12,13 @@
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="assets/js/main.js" type="module" defer></script>
-  <script src="app.js"></script>
 
 </head>
 
 <body>
   <!--loader-->
   <div class="loader loader--hidden">
-    <div class="loader__container">
-      <!-- Contenido del loader -->
-    </div>
+    <!-- Contenido del loader -->
   </div>
 
   <!-- Contenido del header-->
@@ -35,9 +32,9 @@
         </svg>
       </a>
 
-      <nav class="nav show--menu">
+      <nav class="nav">
         <div class="nav__menu">
-          <button type="button" class="nav__btn btn--close">
+          <button type="button" class="nav__btn btn__close">
             <i class="bx bx-x"></i>
           </button>
           <ul class="nav__list">
@@ -49,12 +46,12 @@
             </li>
           </ul>
         </div>
-        <div class="nav__buttons show">
-          <button type="button" class="nav__btn btn--cart">
+        <div class="nav__buttons">
+          <button type="button" class="nav_btn btn--cart">
             <i class="bx bxs-shopping-bag-alt"></i>
             <span class="notify"></span>
           </button>
-          <button type="button" class="nav__btn btn--menu">
+          <button type="button" class="nav_btn btn__menu">
             <i class="bx bxs-grid-alt"></i>
           </button>
         </div>
@@ -75,20 +72,6 @@
     <section class="products section">
       <h2 class="products__title section--title">Productos</h2>
       <div class="products__container container">
-        <article class="product">
-          <div class="product__image">
-            <img src="https://fernandosalazar.co/wp-content/uploads/2020/12/camisa-fs-formal-gris-claro.png"
-              alt="camisa-fs-formal-gris-claro">
-          </div>
-          <div class="product__content">
-            <button type="button" class="product__btn add--to--cart">
-              <i class='bx bxs-cart-add'></i>
-            </button>
-            <span class="product__price">$10</span>
-            <span class="product__stock">Disponibles: 5</span>
-            <h3 class="product__title">Camisa manga larga slim fit</h3>
-          </div>
-        </article>
       </div>
     </section>
   </main>
@@ -98,7 +81,7 @@
     <div class="cart__container">
       <div class="cart__header">
         <h3 class="cart__title">Carrito de Compras</h3>
-        <button type="button" class="nav__btn btn-close">
+        <button type="button" class="nav__btn btn__close">
           <i class='bx bx-x'></i>
         </button>
       </div>
@@ -109,23 +92,18 @@
         </div>
         <article class="article">
           <div class="article__image">
-            <img src="https://fernandosalazar.co/wp-content/uploads/2020/12/camisa-fs-formal-gris-claro.png"
-              alt="camisa-fs-formal-gris-claro" alt="products 1">
           </div>
           <div class="article__content">
-            <h3 class="article__title">Camisa manga larga slim fit</h3>
-            <span class="article__price">$10</span>
             <div class="article__quantity">
-              <button type="button" class="article__quantity--btn article--minus">
+              <button type="button" class="article__quantity-btn article--minus">
                 <i class='bx bx-minus'></i>
               </button>
-              <span class="article__quantity-text">1
-              </span>
-              <button type="button" class="article__quantity--btn article--plus">
+              <span class="article__quantity-text">0</span>
+              <button type="button" class="article__quantity-btn article--plus">
                 <i class='bx bx-plus'></i>
               </button>
             </div>
-            <button type="button" class="article__btn--delete">
+            <button type="button" class="article__btn remove-from-cart">
               <i class='bx bx-trash'></i>
             </button>
           </div>
@@ -163,7 +141,8 @@
               </a>
             </li>
             <li class="footer__item">
-              <a href="https://api.whatsapp.com/send?phone=573028439502&text=Hola,%20vi%20tu%20pagina%20y%20quisiera%20conocer%20más%20sobre%20los%20productos" target="_blank" class="footer__link">
+              <a href="https://api.whatsapp.com/send?phone=573028439502&text=Hola,%20vi%20tu%20pagina%20y%20quisiera%20conocer%20más%20sobre%20los%20productos"
+                target="_blank" class="footer__link">
                 <i class='bx bxl-whatsapp-square'></i>
               </a>
             </li>

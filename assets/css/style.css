@@ -272,14 +272,14 @@ button {
 @media(max-width: 768px) {
   .nav__menu {
       position: fixed;
-      bottom: var(--z-fixed);
-      left: -100%;
+      bottom: -100%;
+      left: 0;
       width: 100%;
       height: calc(max-content - var(--header-height));
       padding: var(--sp-3) 0 var(--sp-2);
       background-color: var(--bg-color);
       z-index: var(--z-fixed);
-      transition: right 0.3s ease-in-out;
+      transition: bottom .3s ease-in-out;
   }
   .footer {
       padding-bottom: 80px;
@@ -357,7 +357,7 @@ button {
 
 /* Show Menu */
 .show__menu {
-  bottom: auto;
+  bottom: var(--header-height);
 }
 
 /* Products */
@@ -369,7 +369,8 @@ button {
 }
 .products__title {
   margin-bottom: var(--sp-2);
-  display: flex;
+  display: var(--z-fixed);
+  
   
 }
 
@@ -530,7 +531,7 @@ button {
 .login__title{
   grid-column: span 2;
 }
-.cart__btn.btn__close{
+.btn--close{
   font-size: var(--medium-font);
   display: flex;
   justify-content: center;
@@ -538,18 +539,15 @@ button {
 }
 
 .cart__body{
-  overflow-y: auto;
   padding: var(--sp-1);
-}
-.login__body{
   overflow-y: auto;
-  padding: var(--sp-1);
+  
 }
 
 .cart__empty{
   display: flex;
-  gap: var(--sp-0-5);
   align-items: center;
+  gap: var(--sp-0-5);
   font-size: var(--normal-font);
 }
 
@@ -610,8 +608,9 @@ button {
   grid-template-rows: repeat(2,1fr);
   align-items: center;
   background-color: var(--card-color);
-  row-gap: var(--sp-1);
   padding: var(--sp-1);
+  row-gap: var(--sp-1);
+  
 }
 
 .cart__count{
@@ -624,7 +623,7 @@ button {
   justify-self: flex-end;
 }
 
-.btn__buy{
+.btn--buy{
   grid-column: span 4;
   background-color: var(--title-color);
   color: var(--bg-color);
@@ -646,7 +645,7 @@ button {
       align-items: center;
   }
   .nav__menu
-  .btn--close, 
+  .btn__close, 
   .btn--menu {
       display: none;
   }
