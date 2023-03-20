@@ -29,3 +29,4 @@ function product(products) {
 }
 
 export default product;
+

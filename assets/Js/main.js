@@ -22,4 +22,4 @@ const {db, p} = products (await getProducts())
 
 /*carrito*/
 /*cart*/
-cart(db, product.printProducts)
+cart(db, products.printProduct)
