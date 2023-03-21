@@ -7,7 +7,7 @@ function showCart() {
   })
 
   cart.addEventListener('click', function(e) {
-    if (e.target.closest('.btn--close')) {
+    if (e.target.closest('.btn__close')) {
     cart.classList.remove('show--cart')
 
     }

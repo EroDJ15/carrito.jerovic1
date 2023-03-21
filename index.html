@@ -31,51 +31,40 @@
           </path>
         </svg>
       </a>
-
-      <nav class="nav">
-        <div class="nav__menu">
+  
+      <div class="nav__menu">
+        <button type="button" class="nav__btn btn__close">
+          <i class="bx bx-x"></i>
+        </button>
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#" class="nav__link">Inicio</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Productos</a>
+          </li>
+        </ul>
+      </div>
+      <div class="nav__buttons">
+        <button type="button" class="nav-btn btn--cart">
+          <i class="bx bxs-shopping-bag-alt"></i>
+          <button class="notification-button"></button>
+        </button>
+        <button type="button" class="nav--btn btn__menu">
+          <i class="bx bxs-grid-alt"></i>
           <button type="button" class="nav__btn btn__close">
-            <i class="bx bx-x"></i>
-          </button>
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a href="#" class="nav__link">Inicio</a>
-            </li>
-            <li class="nav__item">
-              <a href="#" class="nav__link">Productos</a>
-            </li>
-          </ul>
-        </div>
-        <div class="nav__buttons">
-          <button type="button" class="nav_btn btn--cart">
-            <i class="bx bxs-shopping-bag-alt"></i>
-            <span class="notify"></span>
-          </button>
-          <button type="button" class="nav_btn btn__menu">
-            <i class="bx bxs-grid-alt"></i>
-          </button>
-        </div>
-      </nav>
-
-
-      <!--<button type="button" class="nav_btn btn--nosotros">
-          <i class='bx bxs-store-alt'></i>
-        </button>-->
-
-      <!--<button type="button" class="nav_btn btn--contactanos">
-          <i class='bx bxs-message-dots'></i>
-        </button>-->
+            <i class='bx bx-x'></i>
+        </button>
+      </div>
     </nav>
   </header>
   <!--Main comienzo-->
   <main class="main">
     <section class="products section">
       <h2 class="products__title section--title">Productos</h2>
-      <div class="products__container container">
-      </div>
+      <div class="products__container container"></div>
     </section>
   </main>
-
   <!--cart-->
   <div class="cart">
     <div class="cart__container">
@@ -86,28 +75,6 @@
         </button>
       </div>
       <div class="cart__body">
-        <div class="cart__empty">
-          <i class='bx bxs-shopping-bag-alt'></i>
-          <p class="cart__empty--text">Tu carro esta vacio</p>
-        </div>
-        <article class="article">
-          <div class="article__image">
-          </div>
-          <div class="article__content">
-            <div class="article__quantity">
-              <button type="button" class="article__quantity-btn article--minus">
-                <i class='bx bx-minus'></i>
-              </button>
-              <span class="article__quantity-text">0</span>
-              <button type="button" class="article__quantity-btn article--plus">
-                <i class='bx bx-plus'></i>
-              </button>
-            </div>
-            <button type="button" class="article__btn remove-from-cart">
-              <i class='bx bx-trash'></i>
-            </button>
-          </div>
-        </article>
       </div>
       <div class="cart__footer">
         <div class="cart__count">
@@ -122,7 +89,6 @@
       </div>
     </div>
   </div>
-
 
   <!--footer-->
   <footer class="footer section">
