@@ -11,7 +11,7 @@ function showCart() {
     cart.classList.remove('show--cart')
 
     }
-
+ 
   })
 }
 

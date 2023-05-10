@@ -5,4 +5,4 @@ function loader () {
   })
 }
 
-export default loader;
+export default loader

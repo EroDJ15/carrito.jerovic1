@@ -5,6 +5,15 @@ function showMenu() {
   nav.addEventListener('click', function (e) {
     if (e.target.closest('.btn__menu')) {
       menu.classList.toggle('show__menu');
+
+        
+    }
+    if (e.target.closest('.btn__close')){
+      menu.classList.remove('show__menu')
+    }
+
+    if (e.target.closest('.nav__link')){
+      menu.classList.remove('show__menu')
     }
   })
 }

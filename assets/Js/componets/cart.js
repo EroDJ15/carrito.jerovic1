@@ -1,24 +1,24 @@
-const cart = (db, drawProducts) => {
-  let cart = [];
+function cart (db, printProducts) {
+  let cart = []
   const productsDOM = document.querySelector(".products__container");
-  const notifyDOM = document.querySelector(".notify");
+  const notificationDOM = document.querySelector(".notification-button");
   const cartDOM = document.querySelector(".cart__body");
-  const countDOM = document.querySelector(".cart__count__item");
-  const totalDOM = document.querySelector(".cart__total__item");
-  const checkoutDOM = document.querySelector(".btn__buy");
+  const countDOM = document.querySelector(".cart__count--item");
+  const totalDOM = document.querySelector(".cart__total--item");
+  const checkoutDOM = document.querySelector(".btn--buy");
 
 
-  const printCart = () => {
-    let htmlCart = "";
+   function printCart () {
+    let htmlCart = " ";
     if (cart.length === 0) {
       htmlCart = `<div class="cart__empty">
       <i class="bx bx-cart"></i>
       <p class="cart__empty__text">No hay productos en el carrito</p>
   </div>`;
-      notifyDOM.classList.remove('show__notification')
+      notificationDOM.classList.remove('show--notification')
     } else {
       for (const item of cart) {
-        const product = db.find(p => p.id === id)
+        const product = db.find(p => p.id === item.id)
         htmlCart += `
         <article class="article">
         <div class="article__image">
@@ -46,35 +46,35 @@ const cart = (db, drawProducts) => {
     }
 
     if (cart.length === 0) {
-      notifyDOM.classList.remove('show--notify')
+     notificationDOM.classList.remove('show__notification')
     } else {
-      notifyDOM.classList.add('show--notify')
+      notificationDOM.classList.add('show__notification')
     }
     cartDOM.innerHTML = htmlCart
-    notifyDOM.innerHTML = showItemsCount()
-    counttotalDOM.innerHTML = showItemsCount()
+    notificationDOM.innerHTML = showItemsCount()
+    countDOM.innerHTML = showItemsCount()
     totalDOM.innerHTML = showTotal()
 
   }
 
   function addToCart(id, qty = 1) {
-    const itemFound = cart.find(i => i.id == id)
+    const itemFinded = cart.find(i => i.id == id)
 
-    if (itemFound) {
-      itemFound.qty += qty
+    if (itemFinded) {
+      itemFinded.qty += qty
     } else {
       cart.push({ id, qty });
     }
-
+    addToCart()
     printCart()
   }
 
 
   function removeFromCart(id, qty = 1) {
-    const itemFound = cart.find(i => i.id == id)
-    const result = itemFound.qty - qty
+    const itemFinded = cart.find(i => i.id === id)
+    const result = itemFinded.qty - qty
     if (result > 0) {
-      itemFound.qty -= qty
+      itemFinded.qty -= qty
     } else {
       cart = cart.filter(i => i.id !== id)
     }
@@ -89,32 +89,34 @@ const cart = (db, drawProducts) => {
   }
 
   function showItemsCount() {
-    let sum = 0
+    let suma = 0
     for (const item of cart) {
-      sum += item.qty
+      suma += item.qty
     }
-    return sum
+    return suma
   }
 
   function showTotal() {
     let total = 0
     for (const item of cart) {
-      const productFound = db.find(p => p.id === item.id)
-      total += item.qty * productFound.price
+      const productFinded = db.find(p => p.id === item.id)
+      total += item.qty * productFinded.price
     }
     return total
   }
 
   function checkout() {
     for (const item of cart) {
-      const productFound = db.find(p => p.id === item.id)
-      productFound.quantity -= item.qty
+      const productFinded = db.find(p => p.id === item.id)
+      productFinded.quantity -= item.qty
     }
     cart = []
-    console.log('Gracias por su compra')
+    printProducts()
+    printCart ()
+    window.alert('Gracias por su compra')
   }
 
-  printCart ()
+
   productsDOM.addEventListener('click', function (e) {
     if (e.target.closest('.add--to-cart')) {
       const id = e.target.closest('.add--to-cart').dataset.id
@@ -123,21 +125,21 @@ const cart = (db, drawProducts) => {
     }
   })
   cartDOM.addEventListener('click', function (e) {
-    if (e.target.closest('.article-minus')) {
-      const id = +e.target.closest('.add--to-cart').dataset.id
+    if (e.target.closest('.add--to--cart')) {
+      const id = +e.target.closest('.article__plus').dataset.id
       removeFromCart(id)
     }
-    if (e.target.closest('.add--to-cart')) {
-      const id = +e.target.closest('.add--to-cart').dataset.id
+    if (e.target.closest('.article__plus')) {
+      const id = +e.target.closest('.article__plus').dataset.id
       addToCart(id)}
 
       if (e.target.closest('.remove-from-cart')) {
-        const id = +e.target.closest('.add--to-cart').dataset.id
+        const id = +e.target.closest('.remove__from__cart').dataset.id
         deleteFromCart(id)}
         
 
       })
-      checkoutDOM.addEventListener('click', function(){
+      checkoutDOM.addEventListener('click', function (e) {
         checkout()
       })
   

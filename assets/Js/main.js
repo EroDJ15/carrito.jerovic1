@@ -17,9 +17,9 @@ showCart()
 /* end ui elments*/
 
 /*products*/
-const {db, p} = products (await getProducts())
+const {db, printProducts} = products (await getProducts())
 
 
 /*carrito*/
 /*cart*/
-cart(db, drawProducts)
+cart(db, printProducts)
