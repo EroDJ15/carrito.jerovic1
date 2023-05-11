@@ -17,9 +17,9 @@ function cart (db, printProducts) {
   </div>`;
       notificationDOM.classList.remove('show--notification')
     } else {
-      for (const item of cart) {
-        const product = db.find(p => p.id === item.id)
-        htmlCart += `
+      for (const item of cart){
+          const product = db.find(p => p.id === item.id)
+          htmlCart += `
         <article class="article">
         <div class="article__image">
             <img src="${product.image}" alt="${product.name}">
@@ -45,7 +45,7 @@ function cart (db, printProducts) {
       }
     }
 
-    if (cart.length === 0) {
+    if (cart.length !== 0) {
      notificationDOM.classList.remove('show__notification')
     } else {
       notificationDOM.classList.add('show__notification')
@@ -57,17 +57,16 @@ function cart (db, printProducts) {
 
   }
 
-  function addToCart(id, qty = 1) {
-    const itemFinded = cart.find(i => i.id == id)
+  function addToCart (id, qty = 1) {
+    const itemFinded =  cart.find(i => i.id == id )
 
-    if (itemFinded) {
-      itemFinded.qty += qty
+    if (itemFinded){
+        itemFinded.qty += qty
     } else {
-      cart.push({ id, qty });
+        cart.push({ id, qty})
     }
-    addToCart()
     printCart()
-  }
+}
 
 
   function removeFromCart(id, qty = 1) {
@@ -118,30 +117,34 @@ function cart (db, printProducts) {
 
 
   productsDOM.addEventListener('click', function (e) {
-    if (e.target.closest('.add--to-cart')) {
-      const id = e.target.closest('.add--to-cart').dataset.id
-      addToCart(id)
-
-    }
-  })
-  cartDOM.addEventListener('click', function (e) {
     if (e.target.closest('.add--to--cart')) {
-      const id = +e.target.closest('.article__plus').dataset.id
-      removeFromCart(id)
+        const id = +e.target.closest('.add--to--cart').dataset.id 
+        addToCart(id)
     }
-    if (e.target.closest('.article__plus')) {
-      const id = +e.target.closest('.article__plus').dataset.id
-      addToCart(id)}
+})
 
-      if (e.target.closest('.remove-from-cart')) {
-        const id = +e.target.closest('.remove__from__cart').dataset.id
-        deleteFromCart(id)}
-        
+cartDOM.addEventListener('click', function (e){
+    if (e.target.closest('.article__minus')){
+        const id = +e.target.closest('.article__minus').dataset.id 
+        removeFromCart(id)
+    }
 
-      })
-      checkoutDOM.addEventListener('click', function (e) {
-        checkout()
-      })
+    if (e.target.closest('.article__plus')){
+        const id = +e.target.closest('.article__plus').dataset.id 
+        addToCart(id)
+    }
+
+    if (e.target.closest('.remove__from__cart')){
+        const id = +e.target.closest('.remove__from__cart').dataset.id 
+       deleteFromCart(id)
+    }
+})
+
+checkoutDOM.addEventListener('click', function (){
+  checkout()
+
+})
+}
   
-  }
+
 export default cart

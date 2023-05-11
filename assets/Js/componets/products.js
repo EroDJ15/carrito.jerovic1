@@ -1,4 +1,5 @@
 function product(products) {
+  const db = [...products];
   function printProducts() {
     const productsDom = document.querySelector('.products__container');
     const htmlProducts = products.map(product => `
@@ -23,10 +24,11 @@ function product(products) {
   printProducts();
 
   return {
-    db: products,
+    db,
     printProducts
-  };
+  }
 }
 
 export default product;
+
 
