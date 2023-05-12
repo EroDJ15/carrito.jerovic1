@@ -15,7 +15,7 @@ function cart (db, printProducts) {
       <i class="bx bx-cart"></i>
       <p class="cart__empty__text">No hay productos en el carrito</p>
   </div>`;
-      notificationDOM.classList.remove('show--notification')
+      notificationDOM.classList.remove('show--notication')
     } else {
       for (const item of cart){
           const product = db.find(p => p.id === item.id)
@@ -46,9 +46,9 @@ function cart (db, printProducts) {
     }
 
     if (cart.length !== 0) {
-     notificationDOM.classList.remove('show__notification')
+      notificationDOM.classList.add('show--notication')
     } else {
-      notificationDOM.classList.add('show__notification')
+      notificationDOM.classList.remove('show--notication')
     }
     cartDOM.innerHTML = htmlCart
     notificationDOM.innerHTML = showItemsCount()

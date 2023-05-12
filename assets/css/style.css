@@ -326,41 +326,26 @@ button {
 }
 
 .notification-button {
-  position: fixed;
-  padding: 5px 5px;
-  background-color: transparent;
-  color:transparent;
-  border: none;
-  border-radius: 5px;
-}
-
-.notification-button::before {
-  content: "*";
-  position: display;
-  top: -5px;
-  right: -11px;
-  width: 10px;
-  height: 10px;
-  background-color:transparent;
-  color:rgb(247, 6, 6);
-  border-radius: 50%;
+  position: absolute;
+  top: 17px;
+  right: 40px;
+  width: 13px;
+  height: 13px;
+  background-color: crimson;
+  font-size: var(--tiny-font);
+  color: white ;  
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: px;
-  font-weight: var(--font-bold);
+  border-radius: 50%;
   opacity: 0;
-  visibility: show;
-  transition: opacity .3s ease-in-out, visibilit .3s ease-in-out;
-}
-
-.notification-button:hover::before {
-  background-color:black;
+  visibility: hidden;
+  transition: opacity .3s ease-in-out, .3s ease-in-out;
 }
 
 .show--notication{
   opacity: 1;
-  visibility: hidden;
+  visibility: visible;
 }
 
 /* Show Menu */
